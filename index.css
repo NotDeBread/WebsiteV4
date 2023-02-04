@@ -1,0 +1,209 @@
+:root {
+  --bouncy: cubic-bezier(0, 2, 0.8, 1);
+}
+
+@font-face {
+  font-family: deca;
+  src: url(fonts/deca.ttf);
+}
+
+html {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  font-family: deca;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.loader-img {
+  width: 100px;
+}
+
+.loader {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+
+  transition: opacity ease-in-out 0.5s;
+}
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  transition: height ease-in-out 0.25s;
+}
+
+.version {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-weight: 900;
+  font-size: 1.5em;
+  opacity: 0.25;
+}
+
+.logo-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 1000px;
+}
+
+.bg-vid-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  filter: brightness(50%) blur(10px);
+  z-index: -1;
+}
+
+.bg-vid {
+  width: 1920px;
+  height: 1080px;
+}
+
+.arrow-container {
+  position: absolute;
+  bottom: 25px;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  transition: bottom ease-in-out 0.25s, opacity ease-in-out 0.25s;
+}
+
+.arrow {
+  width: 50px;
+  cursor: pointer;
+  animation: arrow 0.75s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite alternate
+    both;
+}
+
+@keyframes arrow {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+
+.footer-header {
+  font-size: 2em;
+  font-weight: 900;
+}
+
+.footer {
+  width: 100vw;
+  height: 200px;
+  background-color: black;
+  background-size: 250px;
+  animation: bg infinite 5s linear;
+  background-image: url(media/projectsbg.png);
+  padding: 25px;
+  border-top: 5px white solid;
+}
+
+.boxes {
+  display: flex;
+  justify-content: baseline;
+  height: 90px;
+  gap: 50px;
+  margin-top: 25px;
+}
+
+@keyframes bg {
+  100% {
+    background-position: 250px 250px;
+  }
+}
+
+.box {
+  width: 300px;
+  height: 75px;
+  background-size: 350px;
+  outline: 5px solid white;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: inset 0px 0px 50px 25px black;
+  user-select: none;
+  transition: height var(--bouncy) 0.25s, letter-spacing var(--bouncy) 0.25s;
+}
+
+.box:hover {
+  height: 90px;
+  letter-spacing: 1px;
+}
+
+.box:active {
+  height: 75px;
+  letter-spacing: 0px;
+}
+
+.box-title {
+  font-weight: 800;
+  font-size: 1.5em;
+}
+
+.tabs {
+  width: 100vw;
+  height: 25px;
+  display: flex;
+  position: absolute;
+  left: 0;
+  bottom: -26px;
+  background-color: black;
+  border-top: 1px solid white;
+
+  transition: bottom ease-in-out 0.25s;
+}
+
+.tab {
+  padding: 0 10px 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  transition: letter-spacing var(--bouncy) 0.25s;
+}
+
+.tab:hover {
+  background-color: rgb(10, 10, 10);
+  letter-spacing: 1px;
+}
+
+.tab:active {
+  background-color: rgb(20, 20, 20);
+  letter-spacing: 0px;
+}
