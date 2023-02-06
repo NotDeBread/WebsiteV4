@@ -70,6 +70,10 @@ a {
   width: 1000px;
 }
 
+.bg {
+  display: none;
+}
+
 .bg-vid-container {
   position: absolute;
   top: 0;

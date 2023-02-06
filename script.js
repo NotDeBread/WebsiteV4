@@ -8,7 +8,6 @@ var loadingFail = 0
 
 setInterval(() => {
     if(video.readyState === 4) {
-        bg.style.setProperty('display','none')
         setTimeout(() => {
             document.getElementById('loader_txt').innerText = 'Done!'
             loadingDone = true
@@ -19,11 +18,13 @@ setInterval(() => {
                 }, 500);
             }, 500);
         }, 1000);
+        loadingFail = 0
     } else {
         loadingFail++
 
         if(loadingFail === 10) {
             video.style.setProperty('display','none')
+            bg.style.setProperty('display','unset')
             loadingDone = true
             setTimeout(() => {
                 document.getElementById('loader_txt').innerText = 'Backround failed loading...'
