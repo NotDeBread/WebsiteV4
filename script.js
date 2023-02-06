@@ -1,4 +1,5 @@
 const video = document.getElementById('video')
+const bg = document.getElementById('bg')
 const loader = document.getElementById('loader')
 
 var loadingDone = false
@@ -7,6 +8,7 @@ var loadingFail = 0
 
 setInterval(() => {
     if(video.readyState === 4) {
+        bg.style.setProperty('display','none')
         setTimeout(() => {
             document.getElementById('loader_txt').innerText = 'Done!'
             loadingDone = true
