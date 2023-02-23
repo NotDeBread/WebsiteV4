@@ -86,6 +86,7 @@ a {
   overflow: hidden;
   filter: brightness(50%) blur(10px);
   z-index: -1;
+  transition: filter ease-in-out 0.25s;
 }
 
 .bg-vid {
@@ -134,7 +135,14 @@ a {
   animation: bg infinite 5s linear;
   background-image: url(media/projectsbg.png);
   padding: 25px;
-  border-top: 5px white solid;
+  border-top: 0px white solid;
+
+  transition: border-top ease-in-out 0.25s;
+}
+
+.boxes-container {
+  transform: translateX(-100vw) skewX(-25deg);
+  transition: transform ease-in-out 0.25s;
 }
 
 .boxes {

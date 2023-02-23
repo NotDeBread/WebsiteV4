@@ -32,7 +32,11 @@
 
     <div class="loader" id="loader">
         <img src="media/Spin.png" class="loader-img">
-        <span id="loader_txt">Loading</span>
+        <span id="loader_txt" style="text-align: center;">Loading</span>
+
+        <div style="display: flex; justify-self: center; align-items: center;">
+            <i style="color: gray;" id="tip">This is a tip</i>
+        </div>
     </div>
 
     <div class="main" id="main">
@@ -40,8 +44,8 @@
             <img src="media/logo.png" class="logo">
         </div>
 
-        <div class="bg-vid-container">
-            <video src="media/bg.mp4" class="bg-vid" autoplay loop id="video"></video>
+        <div class="bg-vid-container" id="videoContainer">
+            <video src="media/bg.mp4" class="bg-vid" autoplay loop muted id="video"></video>
             <img src="media/bg0.png" id="bg" class="bg">
         </div>
 
@@ -50,11 +54,11 @@
             <img src="media/icons/arrow.png" class="arrow" onclick="open_()">
         </div>
     </div>
-    <a href="https://github.com/NotDeBread/WebsiteV4/commits/main" target="_blank" class="version">v4.06c</a>
+    <a href="https://github.com/NotDeBread/WebsiteV4/commits/main" target="_blank" class="version">v4.07</a>
 
-    <section class="footer">
+    <section class="footer" id="footer">
         <span class="footer-header" id="footer-header">// Projects</span>
-        <div id="projects">
+        <div id="projects" class="boxes-container">
             <div class="boxes">
                 <a class="box" style="background-image: url(media/boxes/projects/1.png);" href="https://debread.space/Eddie-Accumulator" target="_blank">
                     <span class="box-title">Eddie Accumulator</span><br>
@@ -67,12 +71,12 @@
                 <a class="box" style="background-image: url(media/boxes/projects/3.png);"
                     href="https://discord.com/api/oauth2/authorize?client_id=1071834572003741836&permissions=8&scope=bot" target="_blank">
                     <span class="box-title">MaxwellBot</span><br>
-                    <span class="box-desc">Greatest Bot</span>
+                    <span class="box-desc">Greatest Discord bot</span>
                 </a>
             </div>
         </div>
 
-        <div id="socials" style="display: none;">
+        <div id="socials" style="display: none;" class="boxes-container">
             <div class="boxes">
                 <a class="box" style="background-image: url(media/boxes/socials/1.png);" href="https://www.youtube.com/notdebread" target="_blank">
                     <span class="box-title">YouTube Channel</span><br>
