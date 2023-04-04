@@ -1,0 +1,59 @@
+.game-cps-container {
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+.game-cps {
+    width: 75vw;
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 75%);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.game-cps-title {
+    font-size: 2em;
+    font-weight: 900;
+}
+
+.game-cps-button-container {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    user-select: none;
+}
+
+.game-cps-button {
+    width: 500px;
+    height: 200px;
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    outline: 5px black solid;
+    background-color: rgba(0, 0, 0, 50%);
+
+    transition: backdrop-filter ease-in-out 0.25s;
+}
+
+.game-cps-button:hover {
+    backdrop-filter: blur(25px);
+}
+
+.game-cps-button:active {
+    background-color: rgba(20, 20, 20, 50%);
+}
+
+.cps {
+    transition: transform ease-in-out 0.05s;
+}
