@@ -1,3 +1,6 @@
 [submodule "PressTheButton"]
 	path = PressTheButton
 	url = https://github.com/NotDeBread/PressTheButton.git
+[submodule "RandomSentenceGenerator"]
+	path = RandomSentenceGenerator
+	url = https://github.com/NotDeBread/RandomSentenceGenerator.git

@@ -4,6 +4,7 @@ const loader = document.getElementById('loader-container')
 const logo = document.getElementById('logo')
 
 var loadingDone = false
+var loadingFail = 0
 
 setInterval(() => {
     if (video.readyState === 4) {
@@ -81,3 +82,148 @@ setInterval(() => {
     }
     document.getElementById("loaderText").innerText = `Loading${loadingDots}`;
 }, 500);
+
+var vidCreditActive = false;
+
+setInterval(() => {
+    if (video.currentTime >= 3 && video.currentTime <= 4 && vidCreditActive === false) {
+        videoCredit('Geometry Dash - "Crystal Corridor" by Knots');
+    }
+    if (video.currentTime >= 97 && video.currentTime <= 98 && vidCreditActive === false) {
+        videoCredit("TUNIC");
+    }
+    if (video.currentTime >= 132 && video.currentTime <= 133 && vidCreditActive === false) {
+        videoCredit("Celeste - Chapter 9: Final Room");
+    }
+}, 1);
+
+function setVideo(part) {
+    if (part === 1) {
+        video.currentTime = 0;
+    } else if (part === 2) {
+        video.currentTime = 95;
+    } else {
+        video.currentTime = 130;
+    }
+}
+
+function videoCredit(credit) {
+    if (vidCreditActive === false) {
+        console.log("Video Credit: ", credit);
+        vidCreditActive = true;
+        document.getElementById("vidCredit").innerText = credit;
+        document.getElementById("vidCredit").style.setProperty("opacity", "1");
+        setTimeout(() => {
+            document
+                .getElementById("vidCredit")
+                .style.setProperty("opacity", "0");
+            vidCreditActive = false;
+        }, 5000);
+    }
+}
+
+function fun() {
+    console.log(
+        "Hi - Sends hi in the console. WARNING: this may crash your browser"
+    );
+    console.log("     hi()");
+
+    console.log("Crash - Literally just crashes your browser");
+    console.log("     crash()");
+
+    console.log(
+        "Smooth - Changes the how long the animations between settings are"
+    );
+    console.log("     smooth(<seconds>)");
+
+    console.log("Big - Scales the page");
+    console.log("     big(<percent>)");
+
+    console.log("Rotate - Rotates the page");
+    console.log("     rotate(<degrees>)");
+
+    console.log("Spin - Spins the page");
+    console.log("     spin(<speed>)");
+
+    console.log("Bright - Changes page brightness");
+    console.log("     bright(<percent>)");
+
+    console.log("Video Blur - Changes how blurry the background video is");
+    console.log("     vblur(<int>)");
+
+    console.log("Video Info - Shows information on the background video");
+    console.log("     vInfo()");
+}
+
+function hi() {
+    for (let i = 0; i >= 0; i++) {
+        console.log("hi :)", i);
+    }
+}
+
+function crash() {
+    while (true) {}
+}
+
+const all = document.getElementById("all");
+
+function big(scale) {
+    all.style.setProperty("scale", scale + "%");
+}
+
+function rotate(degrees) {
+    all.style.setProperty("rotate", degrees + "deg");
+}
+
+var spinspeed = 0;
+
+function spin(speed) {
+    setInterval(() => {
+        spinspeed += speed;
+        all.style.setProperty("rotate", spinspeed + "deg");
+    }, 1);
+}
+
+function bright(brightness) {
+    all.style.setProperty("filter", "brightness(" + brightness + "%)");
+}
+
+const flipAngles = {
+    x: 0,
+    y: 0,
+    z: 0,
+};
+
+function flip(axis) {
+    if (!["x", "y", "z"].includes(axis)) {
+        errorlog("flip(<'x' OR 'y' OR 'z'>)");
+        return;
+    }
+    flipAngles[axis] += 180;
+    all.style.transform = `rotate${axis.toUpperCase()}(${flipAngles[axis]}deg)`;
+}
+
+function vblur(blur) {
+    document
+        .getElementById("videoContainer")
+        .style.setProperty("filter", `blur(${blur}px) brightness(50%)`);
+}
+
+function smooth(time) {
+    if (time !== undefined) {
+        all.style.setProperty("transition", `all ease-in-out ${time}s`);
+        console.log(`Smoothing set to ${time} seconds`);
+    } else {
+        errorlog("smooth(<seconds>)");
+    }
+}
+
+function errorlog(syntax) {
+    console.log("Invalid syntax! Please use the following syntax: \n" + syntax);
+}
+
+function vInfo() {
+    console.log('Game 1: Geometry Dash - "Crystal Corridor" by Knots');
+    console.log("Game 2: TUNIC");
+    console.log("Game 3: Celeste - Chapter 9: Final Room");
+}
