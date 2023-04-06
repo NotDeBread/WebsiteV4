@@ -115,7 +115,8 @@ a {
 .new {
   display: flex;
   align-items: center;
-  color: #212121;
+  color: #ffffff;
+  font-weight: 800;
 }
 
 .newLine {
@@ -194,6 +195,9 @@ a {
   }
   .boxButtonText {
     height: 45px;
+  }
+  .boxButtonTextL {
+    height: 65px;
   }
   .logo {
     width: 80vw;
