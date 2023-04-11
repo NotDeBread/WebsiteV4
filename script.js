@@ -7,7 +7,7 @@ var loadingDone = false
 var loadingFail = 0
 
 setInterval(() => {
-    if (video.readyState === 4) {
+    if (video.readyState === 4 || window.innerWidth > 767) {
         setTimeout(() => {
             document.getElementById("loaderText").innerText = "Done!";
             loadingDone = true;
@@ -16,6 +16,20 @@ setInterval(() => {
                 setTimeout(() => {
                     loader.style.setProperty("display", "none");
                 }, 500);
+                document.getElementById('box1').style.setProperty('padding','10px')
+                document.getElementById('box2').style.setProperty('padding','10px')
+                document.getElementById('box3').style.setProperty('padding','10px')
+                if(window.innerWidth > 767) {
+                    setTimeout(() => {
+                        document.getElementById('box1').style.setProperty('height','300px')
+                        setTimeout(() => {
+                            document.getElementById('box2').style.setProperty('height','300px')
+                            setTimeout(() => {
+                                document.getElementById('box3').style.setProperty('height','300px')
+                            }, 50);
+                        }, 50);
+                    }, 200);
+                }
             }, 500);
         }, 1000);
         loadingFail = 0;
@@ -97,6 +111,12 @@ setInterval(() => {
     }
 }, 1);
 
+const vidProgress = document.getElementById('vidProgress')
+
+setInterval(() => {
+    vidProgress.style.width = video.currentTime / 272 * 100 + '%'
+}, 1000);
+
 function setVideo(part) {
     if (part === 1) {
         video.currentTime = 0;
@@ -121,6 +141,8 @@ function videoCredit(credit) {
         }, 5000);
     }
 }
+
+//Hidden Settings
 
 function fun() {
     console.log(

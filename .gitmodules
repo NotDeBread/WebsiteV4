@@ -4,3 +4,6 @@
 [submodule "RandomSentenceGenerator"]
 	path = RandomSentenceGenerator
 	url = https://github.com/NotDeBread/RandomSentenceGenerator.git
+[submodule "BigNumber"]
+	path = BigNumber
+	url = https://github.com/NotDeBread/BigNumber.git
