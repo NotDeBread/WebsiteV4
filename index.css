@@ -123,9 +123,6 @@ a {
   height: 0;
   overflow: hidden;
   background-color: rgba(0, 0, 0, 50%);
-  padding: 0;
-  padding-left: 10px;
-  padding-right: 10px;
   display: flex;
   flex-direction: column;
   background-color: #3b3b3b;
