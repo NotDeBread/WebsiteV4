@@ -7,3 +7,6 @@
 [submodule "BigNumber"]
 	path = BigNumber
 	url = https://github.com/NotDeBread/BigNumber.git
+[submodule "PixelGenerator"]
+	path = PixelGenerator
+	url = https://github.com/NotDeBread/PixelGenerator.git
