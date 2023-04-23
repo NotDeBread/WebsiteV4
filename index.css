@@ -106,8 +106,33 @@ a {
   height: 300px;
 }
 
+.logoContainer {
+  display: flex;
+  position: relative;
+}
+
 .logo {
   filter: drop-shadow(0 0 10px black);
+}
+
+#logoSplashText {
+  position: absolute;
+  bottom: 30px;
+  right: -25px;
+  color: yellow;
+  animation: splash 1s ease-in-out infinite forwards;
+}
+
+@keyframes splash {
+  from {
+    transform: scale(100%) rotate(-10deg);
+  }
+  50% {
+    transform: scale(125%) rotate(-10deg);
+  }
+  to {
+    transform: scale(100%) rotate(-10deg);
+  }
 }
 
 .boxTitle {
@@ -129,7 +154,7 @@ a {
   flex-direction: column;
   background-color: #3b3b3b;
   box-shadow: 2px 2px inset #525252, -2px -2px inset #212121, 0 0 10px black;
-  transition: height ease-out 0.5s, padding ease-out 0.5s;
+  transition: height cubic-bezier(.5,0,.25,1) 0.5s, padding cubic-bezier(.5,0,.25,1) 0.5s;
 }
 
 .new {
