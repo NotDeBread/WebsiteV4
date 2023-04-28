@@ -10,6 +10,7 @@ body {
   color: white;
   font-family: "Poppins", sans-serif;
   user-select: none;
+  overflow: hidden;
 }
 
 a {
@@ -243,6 +244,141 @@ a {
   transition: width linear 1s;
 }
 
+.gameIconContainer {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.gameIcon {
+  width: 50px;
+  bottom: 15px;
+  right: 15px;
+  transition: scale var(--bouncy) 0.25s;
+  cursor: pointer;
+}
+
+.gameIcon:hover {
+  animation: gameBounce 0.5s ease-in-out 1 forwards;
+}
+
+.gameIcon:active {
+  scale: 90%;
+}
+
+
+@keyframes gameBounce {
+  0% {
+    transform: rotate(7deg);
+  }
+  25% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(2deg);
+  }
+  75% {
+    transform: rotate(-1deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+#gameTipContainer {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  z-index: 6;
+  opacity: 0;
+  transition: opacity ease-in-out 0.5s;
+}
+
+#gameTipContainer span {
+  padding: 0 50px;
+  background-color: rgba(0, 0, 0, 75%);
+  border-radius: 5px;
+  font-size: 2em;
+}
+
+#gameContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  background-color: white;
+  filter: brightness(0);
+  transition: opacity ease-in-out 0.5s, filter ease-in-out 0.5s;
+}
+
+#game {
+  width: 740px;
+  height: 480px;
+  z-index: 5;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  background-image: url(media/game/gameBackground.png);
+  position: relative;
+}
+
+.gameBGContainer {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+}
+
+.gameBG {
+  width: 1920px;
+  height: 1080px;
+}
+
+.gameLoader {
+  width: 740px;
+  transition: opacity ease-in-out 0.25s;
+  z-index: 2;
+}
+
+.gameLogo {
+  width: 300px;
+  animation: gameLogoAnimate 10s ease-in-out infinite forwards;
+}
+
+.gameButtonPlay {
+  width: 300px;
+}
+
+@keyframes gameLogoAnimate {
+  0% {
+    transform: scale(110%) rotate(10deg);
+  } 
+  20% {
+    transform: scale(103%) rotate(-4deg);
+  }
+  40% {
+    transform: scale(106%) rotate(5deg);
+  }
+  60% {
+    transform: scale(103%) rotate(-2deg);
+  }
+  60% {
+    transform: scale(113%) rotate(-4deg);
+  }
+  100% {
+    transform: scale(110%) rotate(10deg);
+  }
+}
+
 @media (max-width: 767px) {
   .content-container {
     justify-content: unset;
@@ -270,5 +406,8 @@ a {
     background-color: rgba(0, 0, 0, 50%);
     padding: 5px;
     border-radius: 5px;
+  }
+  .gameIcon {
+    display: none;
   }
 }

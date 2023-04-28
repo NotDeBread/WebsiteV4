@@ -30,7 +30,7 @@
 
 <body id="all">
 
-    <a class="version" href="https://github.com/NotDeBread/WebsiteV4/commits/main" target="_blank">v4.12b</a>
+    <a class="version" href="https://github.com/NotDeBread/WebsiteV4/commits/main" target="_blank">v4.12c</a>
 
     <section id="loader-container">
         <img src="media/loader.png" id="loader">
@@ -169,7 +169,29 @@
     </div>
     <div id="vidProgress"></div>
 
+    <div id="gameTipContainer">
+        <span>Press ESC to leave.</span>
+    </div>
+
+    <div class="gameIconContainer" style="display: none;">
+        <img src="media/game.png" class="gameIcon" onclick="gameOpen()">
+    </div>
+
+    <section id="gameContainer">
+        <div class="gameBGContainer">
+            <img src="media/gameBG.png" class="gameBG">
+        </div>
+        <div id="gameLoader">
+            <img src="media/game/debreadGames.png" class="gameLoader">
+        </div>
+        <div id="game">
+            <img src="media/game/fightGameLogo.png" class="gameLogo">
+            <img src="media/game/buttonPlay.png" class="gameButtonPlay">
+        </div>
+    </section>
+
     <script src="script.js"></script>
+    <script src="game.js"></script>
 </body>
 
 </html>
