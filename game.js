@@ -3,8 +3,6 @@ const game = document.getElementById('game')
 const gameLoader = document.getElementById('gameLoader')
 const gameTip = document.getElementById('gameTipContainer')
 
-gameOpen()
-
 let gameActive = false
 
 function gameOpen() {
