@@ -286,6 +286,7 @@ a {
 
 #gameTipContainer {
   position: absolute;
+  pointer-events: none;
   top: 10px;
   left: 0;
   display: flex;
@@ -311,9 +312,10 @@ a {
   height: 100vh;
   display: none;
   justify-content: center;
+  overflow: hidden;
   align-items: center;
   opacity: 0;
-  background-color: white;
+  background-color: rgb(47, 39, 53);
   filter: brightness(0);
   transition: opacity ease-in-out 0.5s, filter ease-in-out 0.5s;
 }
@@ -326,9 +328,15 @@ a {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 10px;
-  background-image: url(media/game/gameBackground.png);
+  background-image: url(media/404bg.png);
   position: relative;
+}
+
+#gameMenuTitle {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  transition: opacity ease-in-out 0.5s;
 }
 
 .gameBGContainer {
@@ -348,35 +356,170 @@ a {
   z-index: 2;
 }
 
-.gameLogo {
-  width: 300px;
-  animation: gameLogoAnimate 10s ease-in-out infinite forwards;
+.gameTitleContainer {
+  line-height: 0.9;
+  text-align: center;
 }
 
-.gameButtonPlay {
-  width: 300px;
+.gameTitle {
+  font-size: 2em;
+  font-weight: 700;
 }
 
-@keyframes gameLogoAnimate {
-  0% {
-    transform: scale(110%) rotate(10deg);
-  } 
-  20% {
-    transform: scale(103%) rotate(-4deg);
+#gamePlayButton {
+  background-color: rgba(30, 30, 30);
+  color: white;
+  font-family: "Poppins", sans-serif;
+  padding: 0px 30px;
+  font-size: 1.5em;
+  cursor: pointer;
+  border: 3px rgb(40, 40, 40) solid;
+}
+
+#gamePlayButton:hover {
+  transform: scale(105%);
+}
+
+#gamePlayButton:active {
+  transform: scale(95%);
+}
+
+#gameMain {
+  transition: opacity ease-in-out 0.5s;
+  display: none;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.boxDisplay {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 50%;
+}
+
+.boxRow {
+  display: flex;
+  gap: 10px;
+}
+
+.box {
+  width: 50px;
+  height: 50px;
+  background-color: rgb(20, 20, 20);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+.inputContainer {
+  display: flex;
+  gap: 10px;
+}
+
+.inputBox {
+  width: 50px;
+  height: 50px;
+  background-color: rgb(15, 15, 15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+}
+
+.keyBoardContainer {
+  display: flex;
+  justify-content: center;
+  bottom: 10px;
+  left: 0;
+}
+
+.keyBoard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.keyBoardRow {
+  display: flex;
+  gap: 5px;
+}
+
+.key {
+  width: 25px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: rgb(15, 15, 15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.keyAnimate {
+  animation: keyAnimate 0.5s ease-out 1 forwards;
+}
+
+#menuContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.menu {
+  background-color: rgb(40, 40, 40);
+  box-shadow: 2px 2px inset rgb(50, 50, 50), -2px -2px inset rgb(30, 30, 30);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.menuHeader {
+  background-color: rgb(40, 40, 40);
+  box-shadow: 2px 2px inset rgb(50, 50, 50), -2px -2px inset rgb(30, 30, 30);
+  padding: 5px;
+  width: calc(100% - 20px);
+  text-align: center;
+}
+
+.menuButton {
+  background-color: rgb(40, 40, 40);
+  box-shadow: 2px 2px inset rgb(50, 50, 50), -2px -2px inset rgb(30, 30, 30);
+  color: white;
+  font-family: "Poppins", sans-serif;
+  border: none;
+  cursor: pointer;
+  margin-top: 5px;
+  width: 100%;
+}
+
+.menuButton:active {
+  background-color: rgb(25, 25, 25);
+  box-shadow: -2px -2px inset rgb(50, 50, 50), 2px 2px inset rgb(30, 30, 30);
+}
+
+@keyframes keyAnimate {
+  from {
+    transform: scale(110%);
   }
-  40% {
-    transform: scale(106%) rotate(5deg);
-  }
-  60% {
-    transform: scale(103%) rotate(-2deg);
-  }
-  60% {
-    transform: scale(113%) rotate(-4deg);
-  }
-  100% {
-    transform: scale(110%) rotate(10deg);
+  to {
+    transform: scale(100%);
   }
 }
+
 
 @media (max-width: 767px) {
   .content-container {

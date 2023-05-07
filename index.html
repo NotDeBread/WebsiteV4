@@ -30,7 +30,7 @@
 
 <body id="all">
 
-    <a class="version" href="https://github.com/NotDeBread/WebsiteV4/commits/main" target="_blank">v4.13</a>
+    <a class="version" href="https://github.com/NotDeBread/WebsiteV4/commits/main" target="_blank">v4.14</a>
 
     <section id="loader-container">
         <img src="media/loader.png" id="loader">
@@ -169,11 +169,11 @@
     </div>
     <div id="vidProgress"></div>
 
-    <div id="gameTipContainer" style="display: none;">
+    <div id="gameTipContainer">
         <span>Press ESC to leave.</span>
     </div>
 
-    <div class="gameIconContainer" style="display: none;">
+    <div class="gameIconContainer">
         <img src="media/game.png" class="gameIcon" onclick="gameOpen()">
     </div>
 
@@ -185,8 +185,113 @@
             <img src="media/game/debreadGames.png" class="gameLoader">
         </div>
         <div id="game">
-            <img src="media/game/fightGameLogo.png" class="gameLogo">
-            <img src="media/game/buttonPlay.png" class="gameButtonPlay">
+            <div id="gameMenuTitle">
+                <div class="gameTitleContainer">
+                    <span>NOT</span><br>
+                    <span class="gameTitle">Wordle</span>
+                </div>
+                <button onclick="gameStart()" id="gamePlayButton">PLAY</button>
+            </div>
+            <div id="gameMain">
+
+                <section id="menuContainer">
+                    <div class="menu">
+                        <div class="menuHeader">
+                            <span id="header">YOU WON!</span>
+                        </div>
+                        <span id="correctWord">The correct word was BREAD</span>
+                        <button class="menuButton" onclick="restart()">Play Again</button>
+                    </div>
+                </section>
+
+                <div class="boxDisplay">
+                    <div class="boxRow">
+                        <div class="box" id="outputBox0-1"></div>
+                        <div class="box" id="outputBox0-2"></div>
+                        <div class="box" id="outputBox0-3"></div>
+                        <div class="box" id="outputBox0-4"></div>
+                        <div class="box" id="outputBox0-5"></div>
+                    </div>
+                    <div class="boxRow">
+                        <div class="box" id="outputBox1-1"></div>
+                        <div class="box" id="outputBox1-2"></div>
+                        <div class="box" id="outputBox1-3"></div>
+                        <div class="box" id="outputBox1-4"></div>
+                        <div class="box" id="outputBox1-5"></div>
+                    </div>
+                    <div class="boxRow">
+                        <div class="box" id="outputBox2-1"></div>
+                        <div class="box" id="outputBox2-2"></div>
+                        <div class="box" id="outputBox2-3"></div>
+                        <div class="box" id="outputBox2-4"></div>
+                        <div class="box" id="outputBox2-5"></div>
+                    </div>
+                    <div class="boxRow">
+                        <div class="box" id="outputBox3-1"></div>
+                        <div class="box" id="outputBox3-2"></div>
+                        <div class="box" id="outputBox3-3"></div>
+                        <div class="box" id="outputBox3-4"></div>
+                        <div class="box" id="outputBox3-5"></div>
+                    </div>
+                    <div class="boxRow">
+                        <div class="box" id="outputBox4-1"></div>
+                        <div class="box" id="outputBox4-2"></div>
+                        <div class="box" id="outputBox4-3"></div>
+                        <div class="box" id="outputBox4-4"></div>
+                        <div class="box" id="outputBox4-5"></div>
+                    </div>
+                    <div class="boxRow">
+                        <div class="box" id="outputBox5-1"></div>
+                        <div class="box" id="outputBox5-2"></div>
+                        <div class="box" id="outputBox5-3"></div>
+                        <div class="box" id="outputBox5-4"></div>
+                        <div class="box" id="outputBox5-5"></div>
+                    </div>
+                    <div class="inputContainer">
+                        <div class="inputBox" id="inputBox1"></div>
+                        <div class="inputBox" id="inputBox2"></div>
+                        <div class="inputBox" id="inputBox3"></div>
+                        <div class="inputBox" id="inputBox4"></div>
+                        <div class="inputBox" id="inputBox5"></div>
+                    </div>
+                </div>
+                <div class="keyBoardContainer">
+                    <div class="keyBoard">
+                        <div class="keyBoardRow">
+                            <div class="key" id="keyQ">Q</div>
+                            <div class="key" id="keyW">W</div>
+                            <div class="key" id="keyE">E</div>
+                            <div class="key" id="keyR">R</div>
+                            <div class="key" id="keyT">T</div>
+                            <div class="key" id="keyY">Y</div>
+                            <div class="key" id="keyU">U</div>
+                            <div class="key" id="keyI">I</div>
+                            <div class="key" id="keyO">O</div>
+                            <div class="key" id="keyP">P</div>
+                        </div>
+                        <div class="keyBoardRow">
+                            <div class="key" id="keyA">A</div>
+                            <div class="key" id="keyS">S</div>
+                            <div class="key" id="keyD">D</div>
+                            <div class="key" id="keyF">F</div>
+                            <div class="key" id="keyG">G</div>
+                            <div class="key" id="keyH">H</div>
+                            <div class="key" id="keyJ">J</div>
+                            <div class="key" id="keyK">K</div>
+                            <div class="key" id="keyL">L</div>
+                        </div>
+                        <div class="keyBoardRow">
+                            <div class="key" id="keyZ">Z</div>
+                            <div class="key" id="keyX">X</div>
+                            <div class="key" id="keyC">C</div>
+                            <div class="key" id="keyV">V</div>
+                            <div class="key" id="keyB">B</div>
+                            <div class="key" id="keyN">N</div>
+                            <div class="key" id="keyM">M</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
