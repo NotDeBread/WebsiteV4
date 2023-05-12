@@ -10,3 +10,6 @@
 [submodule "PixelGenerator"]
 	path = PixelGenerator
 	url = https://github.com/NotDeBread/PixelGenerator.git
+[submodule "MathGame"]
+	path = MathGame
+	url = https://github.com/NotDeBread/MathGame.git
