@@ -55,7 +55,7 @@ a {
   color: grey;
 }
 
-.bgVideo-container {
+#bgVideoContainer {
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -84,7 +84,7 @@ a {
   transition: opacity ease-in-out 0.5s;
 }
 
-.content-container {
+.contentContainer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -100,10 +100,69 @@ a {
   height: 300px;
 }
 
-.content-boxes {
+.contentBoxes {
   display: flex;
-  gap: 25px;
-  height: 300px;
+  gap: 20px;
+}
+
+.contentBox {
+  background-color: rgb(40, 40, 40);
+  box-shadow: 2px 2px inset rgb(50, 50, 50), -2px -2px inset rgb(30, 30, 30);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: min-content;
+}
+
+.contentBoxHeader {
+  padding: 5px;
+  background-color: rgb(40, 40, 40);
+  box-shadow: 2px 2px inset rgb(50, 50, 50), -2px -2px inset rgb(30, 30, 30);
+  font-size: 1.25em;
+  font-weight: 700;
+}
+
+.contentBoxButtons {
+  display: flex;
+  flex-direction: column;
+}
+
+.contentBoxButton {
+  background-color: rgb(40, 40, 40);
+  box-shadow: 2px 2px inset rgb(50, 50, 50), -2px -2px inset rgb(30, 30, 30);
+  overflow: hidden;
+  line-height: 0;
+  padding: 5px;
+  width: 350px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: line-height ease-in-out 0.25s;
+}
+
+.contentBoxButton:hover {
+  line-height: 0.95;
+  filter: brightness(110%);
+}
+
+.contentBoxDesc {
+  opacity: 0;
+  color: grey;
+  letter-spacing: 0px;
+  transition: opacity ease-in-out 0.25s, letter-spacing ease-in-out 0.25s;
+}
+
+.contentBoxButton:hover .contentBoxDesc {
+  opacity: 1;
+  letter-spacing: 0;
+}
+
+.contentBoxIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .logoContainer {
@@ -111,127 +170,30 @@ a {
   position: relative;
 }
 
-.logo {
-  filter: drop-shadow(0 0 10px black);
-}
-
-#logoSplashText {
-  position: absolute;
-  bottom: 30px;
-  right: -25px;
-  color: yellow;
-  animation: splash 1s ease-in-out infinite forwards;
-}
-
-@keyframes splash {
-  from {
-    transform: scale(100%) rotate(-10deg);
-  }
-  50% {
-    transform: scale(125%) rotate(-10deg);
-  }
-  to {
-    transform: scale(100%) rotate(-10deg);
-  }
-}
-
-.boxTitle {
-  font-size: 1.5em;
-  font-weight: 800;
-  padding: 2px 10px;
-  margin-bottom: 10px;
-  background-color: #3b3b3b;
-  box-shadow: 2px 2px inset #525252, -2px -2px inset #212121;
-}
-
-.content-box {
-  width: 300px;
-  padding: 0px 10px;
-  height: 0;
-  overflow: hidden;
-  background-color: rgba(0, 0, 0, 50%);
-  display: flex;
-  flex-direction: column;
-  background-color: #3b3b3b;
-  box-shadow: 2px 2px inset #525252, -2px -2px inset #212121, 0 0 10px black;
-  transition: height cubic-bezier(.5,0,.25,1) 0.5s, padding cubic-bezier(.5,0,.25,1) 0.5s;
-}
-
-.new {
-  display: flex;
-  align-items: center;
-  color: #ffffff;
-  font-weight: 800;
-}
-
-.newLine {
-  width: 100%;
-  height: 2px;
-  background-color: #212121;
-}
-
-.boxButton {
-  display: flex;
-  cursor: pointer;
-  user-select: none;
-}
-
-.boxButton:hover {
-  filter: brightness(110%);
-}
-
-.boxButton:active {
-  transform: scale(95%);
-}
-
-.boxButtonIcon {
+#dropDownButton {
+  background-color: rgb(40, 40, 40);
+  box-shadow: 2px 2px inset rgb(50, 50, 50), -2px -2px inset rgb(30, 30, 30);
+  height: 40px;
   width: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #3b3b3b;
-  box-shadow: 2px 2px inset #525252, -2px -2px inset #212121;
-}
-
-.boxButtonText {
-  display: flex;
-  flex-direction: column;
-  height: 25px;
-  width: 100%;
-  padding: 3px 10px;
-  overflow: hidden;
-  background-color: #3b3b3b;
-  box-shadow: 2px 2px inset #525252, -2px -2px inset #212121;
-  transition: height ease-in-out 0.25s;
-}
-
-.boxButton:hover .boxButtonText {
-  height: 45px;
-}
-
-.boxButtonTextL {
-  display: flex;
-  flex-direction: column;
-  height: 25px;
-  width: 100%;
-  padding: 3px 10px;
-  overflow: hidden;
-  background-color: #3b3b3b;
-  box-shadow: 2px 2px inset #525252, -2px -2px inset #212121;
-  transition: height ease-in-out 0.25s;
-}
-
-.boxButton:hover .boxButtonTextL {
-  height: 65px;
-}
-
-.boxElementTitle {
+  cursor: pointer;
   font-weight: 700;
 }
 
-.boxElementDesc {
-  font-size: 0.75em;
-  white-space: nowrap;
+#dropDownButton:hover {
+  filter: brightness(110%);
+}
+
+#youtubeDropdown {
+  overflow: hidden; 
+  height: 0;
+  transition: height ease-in-out 0.5s;
+}
+
+.logo {
+  filter: drop-shadow(0 0 10px black);
 }
 
 #vidProgress {
@@ -244,15 +206,13 @@ a {
 }
 
 .gameIconContainer {
-  position: absolute;
+  position: fixed;
   bottom: 10px;
   right: 10px;
 }
 
 .gameIcon {
   width: 50px;
-  bottom: 15px;
-  right: 15px;
   transition: scale var(--bouncy) 0.25s;
   cursor: pointer;
 }
@@ -520,29 +480,31 @@ a {
   }
 }
 
-
-@media (max-width: 767px) {
-  .content-container {
-    justify-content: unset;
-  }
-  .content-boxes {
+@media (max-width: 1150px) {
+  .contentBoxes {
     flex-direction: column;
     height: unset;
   }
-  .boxButtonText {
-    height: 45px;
+  .contentBoxButton {
+    line-height: 0.95;
   }
-  .boxButtonTextL {
-    height: 65px;
+  .contentBoxDesc {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 767px) {
+  .contentBoxButton {
+    line-height: 0.95;
+  }
+  .contentBoxDesc {
+    opacity: 1;
+  }
+  .contentBoxes {
+    flex-direction: column;
   }
   .logo {
     width: 80vw;
-  }
-  .content-box {
-    height: unset;
-  }
-  #box3 {
-    margin-bottom: 50px;
   }
   #vidCredit {
     background-color: rgba(0, 0, 0, 50%);

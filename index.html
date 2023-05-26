@@ -30,149 +30,195 @@
 
 <body id="all">
 
-    <a class="version" href="https://github.com/NotDeBread/WebsiteV4/commits/main" target="_blank">v4.15b</a>
+    <a class="version" href="https://github.com/NotDeBread/WebsiteV4/commits/main" target="_blank">v4.16</a>
 
-    <section id="loader-container">
+    <section id="loader-container" style="display: none;">
         <img src="media/loader.png" id="loader">
         <span id="loaderText"></span>
         <em id="splashText"></em>
     </section>
 
-    <div class="bgVideo-container">
+    <div id="bgVideoContainer">
         <video id="bgVideo" src="media/bg.mp4" autoplay loop muted></video>
     </div>
 
     <span id="vidCredit"></span>
 
-    <section class="content-container">
+    <section class="contentContainer">
         <div class="logoContainer">
             <img src="media/logo.png" width="500" class="logo">
-            <!-- <span id="logoSplashText">This is some spash text!</span> -->
         </div>
         <div class="content">
-
-            <div class="content-boxes">
-                <!--PROJECTS-->
-
-                <div class="content-box" id="box1">
-                    <span class="boxTitle">Projects</span>
-                    <a class="boxButton" href="https://debread.space/Eddie-Accumulator/" target="_blank">
-                        <div class="boxButtonIcon">
-                            <img src="media/icons/eddieAccumulator.png" width="25">
-                        </div>
-                        <div class="boxButtonText">
-                            <span class="boxElementTitle">Eddie Accumulator Classic</span>
-                            <span class="boxElementDesc">Cookie Clicker, But better</span>
-                        </div>
-                    </a>
-
-                    <a class="boxButton" href="https://debread.space/PressTheButton" target="_blank">
-                        <div class="boxButtonIcon">
-                            <img src="media/icons/pressTheButton.png" width="25">
-                        </div>
-                        <div class="boxButtonText">
-                            <span class="boxElementTitle">Press The Button</span>
-                            <span class="boxElementDesc">Carpal Tunnel simulator</span>
-                        </div>
-                    </a>
-                    <a class="boxButton" href="https://debread.space/RandomSentenceGenerator" target="_blank">
-                        <div class="boxButtonIcon">
-                            <img src="media/icons/RSG.png" width="25">
-                        </div>
-                        <div class="boxButtonTextL">
-                            <span class="boxElementTitle">Random Sentence Generator</span>
-                            <span class="boxElementDesc" style="white-space: normal;">A random sentence generator based on the Anything Bot on Twitter</span>
-                        </div>
-                    </a>
-                    <div class="new">
-                        <div class="newLine"></div>
-                        <span style="padding: 10px;">NEW</span>
-                        <div class="newLine"></div>
+            <div class="contentBoxes">
+                <div class="contentBox">
+                    <div class="contentBoxHeader">
+                        <span>Fun</span>
                     </div>
-                    <a class="boxButton" href="https://debread.space/MathGame" target="_blank">
-                        <div class="boxButtonIcon">
-                            <img src="media/icons/mathGame.png" width="25">
-                        </div>
-                        <div class="boxButtonText">
-                            <span class="boxElementTitle">Math Game</span>
-                            <span class="boxElementDesc" style="white-space: normal;">A math game for my Algebra final lmao</span>
-                        </div>
-                    </a>
+                    <div class="contentBoxButtons">
+                        <a class="contentBoxButton" href="https://debread.space/Eddie-Accumulator/" target="_blank">
+                            <div class="contentBoxIcon">
+                                <img src="media/icons/eddieAccumulator.png" width="30px">
+                            </div>
+                            <div class="contentBoxText">
+                                <span style="font-weight: 600;">Eddie Accumulator Classic</span><br>
+                                <em class="contentBoxDesc">Cookie Clicker, but better.</em>
+                            </div>
+                        </a>
+                        <a class="contentBoxButton" href="https://debread.space/PressTheButton/" target="_blank">
+                            <div class="contentBoxIcon">
+                                <img src="media/icons/pressTheButton.png" width="30px">
+                            </div>
+                            <div class="contentBoxText">
+                                <span style="font-weight: 600;">Press The Button</span><br>
+                                <em class="contentBoxDesc">Carpal Tunnel Simulator.</em>
+                            </div>
+                        </a>
+                        <a class="contentBoxButton" href="https://debread.space/RandomSentenceGenerator/" target="_blank">
+                            <div class="contentBoxIcon">
+                                <img src="media/icons/RSG.png" width="30px">
+                            </div>
+                            <div class="contentBoxText">
+                                <span style="font-weight: 600;">Random Sentence Generator</span><br>
+                                <em class="contentBoxDesc">Generate random sentences!</em>
+                            </div>
+                        </a>
+                        <a class="contentBoxButton" href="https://debread.space/MathGame/" target="_blank">
+                            <div class="contentBoxIcon">
+                                <img src="media/icons/mathGame.png" width="30px">
+                            </div>
+                            <div class="contentBoxText">
+                                <span style="font-weight: 600;">Math Game</span><br>
+                                <em class="contentBoxDesc">A math game for my algebra final.</em>
+                            </div>
+                        </a>
+                    </div>
                 </div>
-
-                <!--TOOLS-->
-
-                <div class="content-box" id="box2">
-                    <span class="boxTitle">Tools</span>
-                    <a class="boxButton" href="https://debread.space/BigNumber/" target="_blank">
-                        <div class="boxButtonIcon">
-                            <img src="media/icons/bigNumber.png" width="25">
-                        </div>
-                        <div class="boxButtonText">
-                            <span class="boxElementTitle">Big Number</span>
-                            <span class="boxElementDesc">Format Large Numbers!</span>
-                        </div>
-                    </a>
-                    <a class="boxButton" href="https://debread.space/PixelGenerator/" target="_blank">
-                        <div class="boxButtonIcon">
-                            <img src="media/icons/pixelGenerator.png" width="25">
-                        </div>
-                        <div class="boxButtonText">
-                            <span class="boxElementTitle">Pixel Generator</span>
-                            <span class="boxElementDesc">Generate random grids of pixels.</span>
-                        </div>
-                    </a>
+                <div class="contentBox">
+                    <div class="contentBoxHeader">
+                        <span>Tools</span>
+                    </div>
+                    <div class="contentBoxButtons">
+                        <a class="contentBoxButton" href="https://debread.space/BigNumber/" target="_blank">
+                            <div class="contentBoxIcon">
+                                <img src="media/icons/bigNumber.png" width="30px">
+                            </div>
+                            <div class="contentBoxText">
+                                <span style="font-weight: 600;">Big Number</span><br>
+                                <em class="contentBoxDesc">Format big numbers!</em>
+                            </div>
+                        </a>
+                        <a class="contentBoxButton" href="https://debread.space/PixelGenerator/" target="_blank">
+                            <div class="contentBoxIcon">
+                                <img src="media/icons/pixelGenerator.png" width="30px">
+                            </div>
+                            <div class="contentBoxText">
+                                <span style="font-weight: 600;">Pixel Generator</span><br>
+                                <em class="contentBoxDesc">Generate random grids of pixels.</em>
+                            </div>
+                        </a>
+                        <a class="contentBoxButton">
+                            <div class="contentBoxIcon">
+                                <img src="media/icons/debreadJS.png" width="30px">
+                            </div>
+                            <div class="contentBoxText">
+                                <span style="font-weight: 600;">DeBread.js</span><br>
+                                <em class="contentBoxDesc">Coming soon!</em>
+                            </div>
+                        </a>
+                    </div>
                 </div>
-
-                <!--SOCIALS-->
-
-                <div class="content-box" id="box3">
-                    <span class="boxTitle">Socials</span>
-                    <a class="boxButton" href="https://www.youtube.com/notdebread" target="_blank">
-                        <div class="boxButtonIcon">
-                            <img src="media/icons/youtube.png" width="25">
+                <div class="contentBox" style="margin-bottom: 100px;">
+                    <div class="contentBoxHeader">
+                        <span>Socials</span>
+                    </div>
+                    <div class="contentBoxButtons">
+                        <div style="display: flex;">
+                            <div id="dropDownButton" onclick="openDropdown()">
+                                ▶
+                            </div>
+                            <a class="contentBoxButton" href="https://youtube.com/notdebread" target="_blank" style="width: 310px;">
+                                <div class="contentBoxIcon">
+                                    <img src="media/icons/youtube.png" width="30px">
+                                </div>
+                                <div class="contentBoxText">
+                                    <span style="font-weight: 600;">YouTube Channel</span><br>
+                                    <em class="contentBoxDesc">Check out my "awesome" videos!</em>
+                                </div>
+                            </a>
                         </div>
-                        <div class="boxButtonText">
-                            <span class="boxElementTitle">YouTube Channel</span>
-                            <span class="boxElementDesc">Check out my "awesome" videos!</span>
+                        <div id="youtubeDropdown">
+                            <a class="contentBoxButton" href="https://youtu.be/6Gl76VYswj0" target="_blank">
+                                <div class="contentBoxIcon">
+                                    <img src="media/icons/youtube.png" width="30px">
+                                </div>
+                                <div class="contentBoxText">
+                                    <span style="font-weight: 600;">Most Popular Video</span><br>
+                                </div>
+                            </a>
+                            <a class="contentBoxButton" href="https://youtu.be/tQg0K2y0Uu0" target="_blank">
+                                <div class="contentBoxIcon">
+                                    <img src="media/icons/youtube.png" width="30px">
+                                </div>
+                                <div class="contentBoxText">
+                                    <span style="font-weight: 600;">Most Recent Video</span><br>
+                                </div>
+                            </a>
+                            <a class="contentBoxButton" href="https://www.youtube.com/@NotDeBread2" target="_blank">
+                                <div class="contentBoxIcon">
+                                    <img src="media/icons/youtube.png" width="30px">
+                                </div>
+                                <div class="contentBoxText">
+                                    <span style="font-weight: 600;">DeBread 2</span><br>
+                                    <em class="contentBoxDesc">Second channel for smaller videos.</em>
+                                </div>
+                            </a>
+                            <a class="contentBoxButton" href="https://www.youtube.com/@DeBreadsClips" target="_blank">
+                                <div class="contentBoxIcon">
+                                    <img src="media/icons/youtube.png" width="30px">
+                                </div>
+                                <div class="contentBoxText">
+                                    <span style="font-weight: 600;">DeBread Clips</span><br>
+                                    <em class="contentBoxDesc">Third channel for clips.</em>
+                                </div>
+                            </a>
                         </div>
-                    </a>
-                    <a class="boxButton" href="https://www.twitch.tv/notdebread" target="_blank">
-                        <div class="boxButtonIcon">
-                            <img src="media/icons/twitch.png" width="25">
-                        </div>
-                        <div class="boxButtonText">
-                            <span class="boxElementTitle">Twitch Channel</span>
-                            <span class="boxElementDesc">Don't expect me to stream any time soon!</span>
-                        </div>
-                    </a>
-                    <a class="boxButton" href="https://twitter.com/notdebread" target="_blank">
-                        <div class="boxButtonIcon">
-                            <img src="media/icons/twitter.png" width="25">
-                        </div>
-                        <div class="boxButtonText">
-                            <span class="boxElementTitle">Twitter</span>
-                            <span class="boxElementDesc">Don't.</span>
-                        </div>
-                    </a>
-                    <a class="boxButton" href="https://discord.gg/53WtGpRxfQ" target="_blank">
-                        <div class="boxButtonIcon">
-                            <img src="media/icons/discord.png" width="25">
-                        </div>
-                        <div class="boxButtonText">
-                            <span class="boxElementTitle">Discord Server</span>
-                            <span class="boxElementDesc">Join my super based server!</span>
-                        </div>
-                    </a>
-                    <a class="boxButton" href="https://github.com/notdebread" target="_blank">
-                        <div class="boxButtonIcon">
-                            <img src="media/icons/github.png" width="25">
-                        </div>
-                        <div class="boxButtonText">
-                            <span class="boxElementTitle">GitHub</span>
-                            <span class="boxElementDesc">Mostly just Eddie here.</span>
-                        </div>
-                    </a>
+                        <a class="contentBoxButton" href="https://twitch.tv/notdebread" target="_blank">
+                            <div class="contentBoxIcon">
+                                <img src="media/icons/twitch.png" width="30px">
+                            </div>
+                            <div class="contentBoxText">
+                                <span style="font-weight: 600;">Twitch Channel</span><br>
+                                <em class="contentBoxDesc">Generate random grids of pixels.</em>
+                            </div>
+                        </a>
+                        <a class="contentBoxButton" href="https://twitter.com/notdebread" target="_blank">
+                            <div class="contentBoxIcon">
+                                <img src="media/icons/twitter.png" width="30px">
+                            </div>
+                            <div class="contentBoxText">
+                                <span style="font-weight: 600;">Twitter</span><br>
+                                <em class="contentBoxDesc">Dont.</em>
+                            </div>
+                        </a>
+                        <a class="contentBoxButton" href="https://discord.gg/53WtGpRxfQ" target="_blank">
+                            <div class="contentBoxIcon">
+                                <img src="media/icons/discord.png" width="30px">
+                            </div>
+                            <div class="contentBoxText">
+                                <span style="font-weight: 600;">Discord Server</span><br>
+                                <em class="contentBoxDesc">Join my super based server!</em>
+                            </div>
+                        </a>
+                        <a class="contentBoxButton" href="https://github.com/notdebread" target="_blank">
+                            <div class="contentBoxIcon">
+                                <img src="media/icons/github.png" width="30px">
+                            </div>
+                            <div class="contentBoxText">
+                                <span style="font-weight: 600;">GitHub</span><br>
+                                <em class="contentBoxDesc">See all of my coding projects!</em>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

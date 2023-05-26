@@ -16,16 +16,16 @@ setInterval(() => {
                 setTimeout(() => {
                     loader.style.setProperty("display", "none");
                 }, 500);
-                document.getElementById('box1').style.setProperty('padding','10px')
-                document.getElementById('box2').style.setProperty('padding','10px')
-                document.getElementById('box3').style.setProperty('padding','10px')
+                // document.getElementById('box1').style.setProperty('padding','10px')
+                // document.getElementById('box2').style.setProperty('padding','10px')
+                // document.getElementById('box3').style.setProperty('padding','10px')
                 if(window.innerWidth > 767) {
                     setTimeout(() => {
-                        document.getElementById('box1').style.setProperty('height','300px')
+                        // document.getElementById('box1').style.setProperty('height','300px')
                         setTimeout(() => {
-                            document.getElementById('box2').style.setProperty('height','300px')
+                            // document.getElementById('box2').style.setProperty('height','300px')
                             setTimeout(() => {
-                                document.getElementById('box3').style.setProperty('height','300px')
+                                // document.getElementById('box3').style.setProperty('height','300px')
                             }, 50);
                         }, 50);
                     }, 200);
@@ -109,7 +109,7 @@ setInterval(() => {
     if (video.currentTime >= 132 && video.currentTime <= 133 && vidCreditActive === false) {
         videoCredit("Celeste - Chapter 9: Final Room");
     }
-}, 1);
+}, 1000);
 
 const vidProgress = document.getElementById('vidProgress')
 
@@ -139,6 +139,20 @@ function videoCredit(credit) {
                 .style.setProperty("opacity", "0");
             vidCreditActive = false;
         }, 5000);
+    }
+}
+
+let dropDownOpen = false
+
+function openDropdown() {
+    if(dropDownOpen === false) {
+        document.getElementById('youtubeDropdown').style.height = '160px'
+        document.getElementById('dropDownButton').innerText = '▼'
+        dropDownOpen = true
+    } else {
+        document.getElementById('youtubeDropdown').style.height = '0'
+        document.getElementById('dropDownButton').innerText = '▶'
+        dropDownOpen = false
     }
 }
 
@@ -218,17 +232,15 @@ const flipAngles = {
 
 function flip(axis) {
     if (!["x", "y", "z"].includes(axis)) {
-        errorlog("flip(<'x' OR 'y' OR 'z'>)");
-        return;
+        errorlog("flip(<'x' OR 'y' OR 'z'>)")
+        return
     }
-    flipAngles[axis] += 180;
-    all.style.transform = `rotate${axis.toUpperCase()}(${flipAngles[axis]}deg)`;
+    flipAngles[axis] += 180
+    all.style.transform = `rotate${axis.toUpperCase()}(${flipAngles[axis]}deg)`
 }
 
 function vblur(blur) {
-    document
-        .getElementById("videoContainer")
-        .style.setProperty("filter", `blur(${blur}px) brightness(50%)`);
+    document.getElementById("bgVideoContainer").style.setProperty("filter", `blur(${blur}px) brightness(50%)`);
 }
 
 function smooth(time) {
