@@ -145,13 +145,16 @@ function videoCredit(credit) {
 let dropDownOpen = false
 
 function openDropdown() {
-    if(dropDownOpen === false) {
-        document.getElementById('youtubeDropdown').style.height = '160px'
-        document.getElementById('dropDownButton').innerText = '▼'
+    var dropdown = document.getElementById('youtubeDropdown')
+    var button = document.getElementById('dropDownArrow')
+
+    if (dropDownOpen === false) {
+        dropdown.style.height = '160px'
+        button.style.rotate = '90deg'
         dropDownOpen = true
     } else {
-        document.getElementById('youtubeDropdown').style.height = '0'
-        document.getElementById('dropDownButton').innerText = '▶'
+        dropdown.style.height = '0'
+        button.style.rotate = '0deg'
         dropDownOpen = false
     }
 }
