@@ -13,3 +13,6 @@
 [submodule "MathGame"]
 	path = MathGame
 	url = https://github.com/NotDeBread/MathGame.git
+[submodule "NotJSAB"]
+	path = NotJSAB
+	url = https://github.com/NotDeBread/NotJSAB.git
