@@ -16,3 +16,6 @@
 [submodule "NotJSAB"]
 	path = NotJSAB
 	url = https://github.com/NotDeBread/NotJSAB.git
+[submodule "Wishlist"]
+	path = Wishlist
+	url = https://github.com/NotDeBread/Wishlist.git
