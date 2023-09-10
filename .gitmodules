@@ -19,3 +19,6 @@
 [submodule "Wishlist"]
 	path = Wishlist
 	url = https://github.com/NotDeBread/Wishlist.git
+[submodule "WinnieAccumulator"]
+	path = WinnieAccumulator
+	url = https://github.com/NotDeBread/WinnieAccumulator.git
